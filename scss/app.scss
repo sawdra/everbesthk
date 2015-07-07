@@ -1,0 +1,467 @@
+@import "settings";
+@import "foundation";
+
+/*
+font-family: arial, Hei, SimSun, 宋体, 黑体, 微软雅黑,  sans-serif;
+
+
+serif (usually '宋体' aka SimSun) or sans-serif (usually SimHei)
+*/
+
+
+$bg-color: #f7f7f7;
+$darkshade:#9E9E9E;
+$midshade:#A5A0A0;
+$lightshade:#C7C7C7;
+$word-dark:#3A3939;
+$word-middle:#474545;
+$word-light:#999;
+$word-highlight:#F6666D;
+$darkred:#ff000a;
+$midred:#F0595f;
+$lightred:#e5a6a8;
+$ebred:#f81512;
+
+
+/*sandra's css*/
+/*set rem?*/
+
+
+.row {
+  max-width: 95%;
+  background-color: $bg-color;
+}
+
+.top-bar-section {
+  text-align: center;
+}
+
+ul#main-menu-items {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.example-orbit > li > img {
+  width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+
+@media only screen and (min-width: 40.0625em){
+ h2 {
+   font-size: 2.0rem;
+ }
+ h1, h2, h3, h4, h5, h6 {
+   line-height: 150%;
+ }
+}
+
+ul, ol, dl {
+  font-family: inherit;
+  font-size: .9rem;
+  line-height: 160%;
+  list-style-position: outside;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+}
+
+
+.panel h3 {
+  color:#333;
+  font-size: 1.5rem;
+}
+
+.panel h3 img {
+  height: 2.0rem;
+  width: auto;
+  margin: .8rem 0rem;
+}
+.panel h4 {
+  color:#333;
+  font-size: 1.1rem;
+}
+
+
+.panel h5 {
+  color:#999;
+  font-size: 0.8rem;
+}
+
+
+footer ul {
+list-style-type: none;
+}
+
+.searchbar {
+  list-style-type: none;
+}
+
+
+
+
+.sidebarSection ul {
+  list-style-type: none;
+  margin-left:.5rem;
+  margin-bottom:.5rem;
+  font-size:1.2rem; 
+  line-height:150% ;
+}
+
+.side-miniSection-title h2 {
+  list-style-type: none;
+  margin-left:.5rem;
+  margin-bottom:.5rem;
+  font-size:1.2rem; 
+  line-height:150% ;
+}
+
+
+
+.sidebarSection li {
+list-style-type: none;
+font-size:1rem;
+line-height:120%;
+}
+
+
+.sidebarSection h3 {
+list-style-type: none;
+margin:0;
+font-size:1rem;
+line-height:120%;
+}
+
+
+
+.sidebarSection h4 {
+list-style-type: none;
+font-size:.9rem;
+line-height:120%;
+margin:0;
+}
+
+.sidebarSection h5 {
+list-style-type: none;
+font-size:.8rem;
+line-height:150%;
+margin:0;
+color: $word-light;
+}
+
+.sidebarSection span {
+list-style-type: none;
+font-size:1rem;
+line-height:150%;
+margin:0;
+color: $word-dark;
+text-decoration: underline;
+}
+
+
+li.side-item.row {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+.sidebarSection i {
+ font-size: 1.5rem;
+
+}
+
+
+
+
+header {
+  margin: .2rem 0rem 1.5rem 0rem;
+  padding: 2rem 0rem 0rem 0rem;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+header .searchbar {
+  position: absolute;
+  right: 20px
+}
+
+.searchbar input[type="text"] {
+  padding:.2rem;
+  font-size:.8rem;
+  height:inherit;
+
+}
+
+.alert.button.expand{
+  padding: .2rem;
+  font-size: .8rem;
+  height:inherit;
+}
+
+.item-header > a > img {
+  display: block;
+  margin: 0 auto;
+}
+
+#ebBannerLogo img {
+  display: block;
+  margin: 0.5rem auto;
+  width: 300px;
+  height:auto;
+} /*@media:mobile-position should change to lefttopcorner*/
+
+
+//this is what working
+.side-miniSection {
+  border-bottom: solid 1px $lightshade;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+a.small-2.columns.sidebar-img{
+  padding: 0;
+}
+
+.small-10.columns.sidebar-word {
+  padding:.5rem 0 0 .8rem;
+}
+
+
+#main, #slider {
+  background-color: $bg-color
+}
+
+h2>img {
+  height:2rem;
+  width:auto;}
+
+
+
+
+#slider {
+  padding-top: 1.5rem;
+}
+
+.panel {
+margin: 0rem;
+padding: .5rem;
+border-style: none;
+background-color: #fff;
+}
+
+
+@media only screen and (min-width: 64.0625em) {
+ .column, .columns {
+   position: relative;
+   margin:0rem;
+   padding: 0rem 0.9rem 0.9375rem;
+   float: left;
+ }
+}
+
+.newProductSection {
+  background-color: rgba(242, 242, 242, 0.35);
+  margin-right:.8rem;
+  padding:1rem 1.3rem;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -o-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+
+}
+
+.newProduct {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  border-radius: .35rem;
+  overflow: auto;
+}
+
+.button{
+  margin:0px;
+}
+
+.more {
+  float:right;
+}
+
+.featuredProductSection {
+  background-color: rgba(196, 233, 243, 0.41);;
+  margin-right: .8rem;
+  padding: 1rem 1.3rem;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -o-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+
+.sidebarSection {
+  padding: 0rem 0rem .8rem 1rem;
+  border-left: solid 1px #EFEFEF;
+}
+
+footer {
+/*  background-image: url("../img/layout/whitediamond.png");*/
+  background-color: #333;
+  margin: 0rem 0rem 0rem;
+  padding: 1rem;
+
+}
+
+footer nav{
+  text-align: center;
+  font-size:.8rem;
+}
+
+footer #ebcontact>h3 {
+  font-size:.8rem;
+  line-height: 1.2rem;
+  margin:0;
+  padding:0;
+  color:#666;
+}
+
+footer #ebcontact>h4 {
+  font-size:.65rem;
+  line-height: .9rem;
+  margin:0;
+  padding:0;
+}
+
+footer #ebcontact>ul {
+  font-size:.6rem;
+  line-height: .9rem;
+  margin:0;
+  padding:0;
+}
+
+footer #ebcontact>li {
+  font-size:.6rem;
+  line-height: .9rem;
+  margin:0;
+  padding:0;
+}
+
+footer #ebcontact>p {
+  font-size:.6rem;
+  line-height: .9rem;
+  margin:0;
+  padding:0;
+}
+
+
+#copyright p{
+  text-align: center;
+  font-size: 0.65rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+
+
+
+
+/*footer #ebcontact>h3,ul,span,p{
+  font-size: .5rem
+}
+
+footer #ebcontact span{
+  font-weight: bold;
+}
+
+
+footer #copy
+{font-size: .4rem;}*/
+
+
+
+
+
+/* Smartphones (portrait and landscape) -----------
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+    /* Styles
+    }*/
+
+    /* Smartphones (landscape) -----------
+    @media only screen
+    and (min-width : 321px) {
+    /* Styles
+    }*/
+
+    /* Smartphones (portrait) -----------
+    @media only screen
+    and (max-width : 320px) {
+    /* Styles
+    }*/
+
+    /* Tablets, iPads (portrait and landscape) ----------- *
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+    /* Styles
+    }
+ */
+    /* Tablets, iPads (landscape) ----------- */
+  /*  @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {*/
+    /* Styles */
+    /*}*/
+
+    /* Tablets, iPads (portrait) ----------- */
+   /* @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+    /* Styles */
+   /* }*/
+
+    /* Desktops and laptops -----------
+    @media only screen
+    and (min-width : 1224px) {
+    /* Styles
+    }*/
+
+    /* Large screens -----------
+    @media only screen
+    and (min-width : 1824px) {
+     Styles
+    }*/
+
+    /* iPhone 4 -----------
+    @media
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles
+    }*/
+
+
+
