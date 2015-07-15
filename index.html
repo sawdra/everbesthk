@@ -1,0 +1,648 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everbest Technologies, Ltd.</title>
+    <!-- favicon --><link rel="icon" type="image/png" href="img/logo/eb_icon_64.png">
+    <head>
+      <title>Everbest Office Location-GoogleMap</title>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+      <meta charset="utf-8">
+      <style>
+      html, body, #map-canvas {
+      height: 120px; 
+      margin: 0px;
+      padding: 0px;
+      }
+      </style>
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+      <script>
+      function initialize() {
+      var mapOptions = {
+      zoom: 15,
+      center: new google.maps.LatLng(22.284991, 114.154050)
+      };
+      
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+      
+      var marker = new google.maps.Marker({
+      position: map.getCenter(),
+      map: map,
+      title: 'Click to zoom'
+      });
+      
+      google.maps.event.addListener(map, 'center_changed', function() {
+      // 3 seconds after the center of the map has changed, pan back to the
+      // marker.
+      window.setTimeout(function() {
+      map.panTo(marker.getPosition());
+      }, 3000);
+      });
+      
+      google.maps.event.addListener(marker, 'click', function() {
+      map.setZoom(16);
+      map.setCenter(marker.getPosition());
+      });
+      }
+      
+      google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+      <link rel="stylesheet" href="css/app.css" />
+      <link rel="stylesheet" href="bower_components/foundation-icon-fonts/foundation-icons.css" />
+      <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
+      <!--    // Add the new slick-theme.css if you want the default styling -->
+      <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+      <script src="bower_components/modernizr/modernizr.js"></script>
+      <!-- chinese font -->
+      <!--     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-33997.js"></script> -->
+      
+    </head>
+    
+    <body>
+      
+      <div id="container" class="clearfix">
+        <!-- header includes 3 parts: 1) seachbar, 2)nav bar, 3)orbit slider -->
+        <header>
+          <div class="row">
+            <div id="ebBannerLogo" class="small-12 columns">
+              <a href="#">
+                <img src= "img/logo/everbest-full-logo_1000px.gif" alt="eblogo"/>
+              </a>
+            </div>
+            <div class="searchbar">
+              <li class="has-form">
+                <div class="row collapse">
+                  <div class="large-8 small-9 columns">
+                    <input type="text" placeholder="Find Stuff">
+                  </div>
+                  <div class="large-4 small-3 columns">
+                    <a href="#" class="alert button expand">Search</a>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <!-- navigation bar -->
+          <!-- @media:destop and tablet: need CSS amendment -->
+          <div class="contain-to-grid sticky">
+            <nav class="top-bar" data-topbar role="navigation">
+              <ul class="title-area">
+                <li class="name">
+                  <h2><a href="#"><img src="img/logo/eb_icon_50px.gif"><img src= "img/logo/everbest-full-logo_1000px.gif" alt="eblogo"/></a></h2>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><i class="fi-list"></i></a></li>
+              </ul>
+              <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="main-menu-items">
+                  <!-- menu-item no dropdown -->
+                  <li class="active"><a href="#">Promotion/News</a></li>
+                  <!-- menu-item has dropdown -->
+                  <li class="has-dropdown">
+                    <a href="#">Brands</a>
+                    <ul class="dropdown">
+                      <li class="has-dropdown">
+                        <a href="#">Networking</a>
+                        <ul class="dropdown">
+                          <li class="active"><a href="#">TP-Link</a></li>
+                          <li class="active"><a href="#">Engenius</a></li>
+                        </ul>
+                        </li> <!-- want to add a level here -->
+                        <li class="has-dropdown">
+                          <a href="#">Surveillence</a>
+                          <ul class="dropdown">
+                            <li class="active"><a href="#">Axis</a></li>
+                            <li class="active"><a href="#">EasyN</a></li>
+                            <li class="active"><a href="#">Wansview</a></li>
+                          </ul>
+                          </li> <!-- want to add a level here -->
+                          <li class="has-dropdown">
+                            <a href="#">Gadgets</a>
+                            <ul class="dropdown">
+                              <li class="active"><a href="#">Brinno</a></li>
+                              <li class="active"><a href="#">CooLux</a></li>
+                              <li class="active"><a href="#">Game Robo</a></li>
+                            </ul>
+                            </li> <!-- want to add a level here -->
+                            <li class="has-dropdown">
+                              <a href="#">Audio</a>
+                              <ul class="dropdown">
+                                <li class="active"><a href="#">Bluedio</a></li>
+                                <li class="active"><a href="#">Royqueen</a></li>
+                                <li class="active"><a href="#">Sades</a></li>
+                                <li class="active"><a href="#">Somic</a></li>
+                                <li class="active"><a href="#">Trendwoo</a></li>
+                              </ul>
+                              </li> <!-- want to add a level here -->
+                            </ul>
+                            </li><!-- close menu-item that has dropdown -->
+                            
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">Warranty Service</a></li>
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">Event/Class</a></li>
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">EB Fans Club</a></li>
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">Live Demos</a></li>
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">About EB</a></li>
+                            <!-- menu-item no dropdown -->
+                            <li class="active"><a href="#">Contact EB</a></li>
+                            </ul><!-- close main nav menu -->
+                          </section>
+                        </nav>
+                      </div>
+                      <p>Bringing Innovative Products into HK & Macau since <span>1991</span></p>
+                      <!--!@media: mobile: TBC: off-canvas -->
+                    </header>
+                    <!-- Sliders for news-->
+                    <!-- @media:all 3: need css, size amendment &margin: auto zero -->
+                    <div id="slider">
+                      <div class="row">
+                        <div class="small-12 columns">
+                          <ul class="example-orbit" data-orbit>
+                            <li>
+                              <img src= "img/slider/tp-link.jpg" alt="TP-Link C3200"/>
+                              <div class="orbit-caption">
+                                TP-LINK Archer C3200: Are you ready for this fast ride?
+                              </div>
+                            </li>
+                            <li>
+                               <img src= "img/slider/brinno.jpg" alt="Brinno Banner"/>
+                              <div class="orbit-caption">
+                                Brinno TCL200 Pro: Never Miss a shot again!
+                              </div>
+                            </li>
+                            <li>
+                               <img src= "img/slider/iWalk.jpg" alt="iWalk banner"/>
+                              <div class="orbit-caption">
+                                iWalk Trio 10000: The Ultimate Ultra Thin Rechargeable Battery 
+                              </div>
+                            </li>
+                            <li>
+                               <img src= "img/slider/gamerobo.jpg" alt="Game Robo banner"/>
+                              <div class="orbit-caption">
+                                Game Robo Alpha 1S: It's time to fulfill your dream of controlling a robot!
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- main  -->
+                    <!-- main section 1)#latestProducts 2)#featuredPrducts" 3)sidebar-->
+                    <!--?????? help, cant make both main1 and main 2 into div main (can't close it for some reason) -->
+                    <div id="main" class="clearfix">
+                      <div class="row wholebodySection">
+                        <div class="medium-8 large-9 columns">
+                          <h2><img src= "img/logo/eb_icon_50.png" alt="eb_icon"/> Latest Products </h2>
+                          <div class="panel radius clearfix newProductSection">
+                            <div class="row">
+                              <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new1 hvr-grow">
+                                  <img class="zoom" src= "img/product/avermedia_gc550.jpg" alt="AverMedia GC550"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/avermedia_logo.jpg" alt="AverMedia"/>
+                                  </a>
+                                  <a href="#">Live Gamer GC550</a>
+                                  </h3>
+                                  <h4> 遊戲錄影直播神器 </h4>
+                                  <h5>2/7/2015 | Gadget | Home </h5>
+                                  <ul>
+                                    <li>高頻寬USB 3.0 介面</li>
+                                    <li>60 Mbps@1080p60錄影品質</li>
+                                    <li>錄影擷取高清影音並存檔</li>
+                                    <li>錄影或直播中途拍照畫面</li>
+                                    <li>HDMI輸入/輸出介面, pass-though</li>
+                                    <li>RECentral 2代升級</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                              <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new2 hvr-grow">
+                                  <img class="zoom" src= "img/product/tp-link_ue300_white.jpg" alt="TP-Link UE300"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/tp-link-logo.jpg" alt="TP-Link"/>
+                                  </a>
+                                  <a href="#">UE300</a>
+                                  </h3>
+                                  <h4>USB3.0 to Giga LAN Adapter </h4>
+                                  <h5>2/7/2015 | Networking | SOHO </h5>
+                                  <ul>
+                                    <li>1000M傳輸</li>
+                                    <li>USB3.0 Port</li>
+                                    <li>Giga LAN</li>
+                                    <li>Plug-n-Play 即插即用</li>
+                                    <li>USB Port收納式設計 易於攜帶</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                              <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new3 hvr-grow">
+                                  <img class="zoom" src= "img/product/brinno_PHV132514.jpg" alt="Brinno PHV132614">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/brinno-logo.jpg" alt="Brinno"/>
+                                  </a>
+                                  <a href="#">PHV 132514</a>
+                                  </h3>
+                                  <h4> 數碼電子貓眼 </h4>
+                                  <h5>2/7/2015 | Surveillance | SOHO </h5>
+                                  <ul>
+                                    <li>LCD大螢幕</li>
+                                    <li>隱藏式安防</li>
+                                    <li>續航力第一</li>
+                                    <li>3步安裝完成</li>
+                                    <li>無須施工拉線轉孔</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                             <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new4 hvr-grow">
+                                  <img class="zoom" src= "img/product/engenius_eap1200h.jpg" alt="Engenius EAP2100"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/engenius-logo.jpg" alt="Engenius"/>
+                                  </a>
+                                  <a href="#">EAP1200H</a>
+                                  </h3>
+                                  <h4>AC1200 Long Range AP </h4>
+                                  <h5>2/7/2015 | Networking | SME </h5>
+                                  <ul>
+                                    <li>300M+867M同步雙頻</li>
+                                    <li>4* 3D Sectorized天線</li>
+                                    <li>Band Steering/Fast Roaming</li>
+                                    <li>100人同時使用</li>
+                                    <li>EZ Controller AP中央管理軟件</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                              <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new5 hvr-grow">
+                                  <img class="zoom" src= "img/product/iwalk_dolphin-dual.jpg" alt="iWALK Dolphin Dual">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/iwalk-logo.jpg" alt="iWALK"/>
+                                  </a>
+                                  <a href="#">Dophin Dual</a>
+                                  </h3>
+                                  <h4> Smart USB Dual Charger </h4>
+                                  <h5>2/7/2015 | Gadgets | Home </h5>
+                                  <ul>
+                                    <li>通過3C認證、蘋果官方認證</li>
+                                    <li>自帶充電保護</li>
+                                    <li>On/Off開關鍵 最大輸出功率:10W</li>
+                                    <li>多重保護電路 智慧晶片控制</li>
+                                    <li>雙USB輸出可用於iPad充電及急充</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                              <div class="medium-6 large-4 columns">
+                                <div class="panel newProduct new5 hvr-grow">
+                                  <img class="zoom" src= "img/product/coolux-x3s.jpg" alt="Coolux X3S Mobile">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/coolux-logo.jpg" alt="iWALK"/>
+                                  </a>
+                                  <a href="#">X3S-Mobile</a>
+                                  </h3>
+                                  <h4> 輕薄3D高清無線便攜投影機  </h4>
+                                  <h5>2/7/2015 | Gadgets | SOHO </h5>
+                                  <ul>
+                                    <li>5*連接:無線/HDMI/VGA/Micro-SD/USB</li>
+                                    <li>無線投影:iOS(DLNA), Android(& Miracast)</li>
+                                    <li>1280x800, 900流明(max.120吋)</li>
+                                    <li>DLP-LINK主動式3D投影 支援Blu-ray 3D影片</li>
+                                    <li>內置8000mAh 無須火牛</li>
+                                    <li>方便攜帶 僅薄28mm 重550g</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <h2><img src= "img/logo/eb_icon_50.png" alt="eb_icon"/> Featured Products </h2>
+                          <!-- featuredzcarousel -->
+                          <div class="carousel-class featuredProductSection panel radius clearfix">
+                                <div class="panel newProduct new1 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/avermedia_gc550.jpg" alt="AverMedia GC550"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/avermedia_logo.jpg" alt="AverMedia"/>
+                                  </a>
+                                  <a href="#">Live Gamer GC550</a>
+                                  </h3>
+                                  <h4> 遊戲錄影直播神器 </h4>
+                                  <h5>2/7/2015 | Gadget | Home </h5>
+                                  <ul>
+                                    <li>高頻寬USB 3.0 介面</li>
+                                    <li>60 Mbps@1080p60錄影品質</li>
+                                    <li>錄影擷取高清影音並存檔</li>
+                                    <li>錄影或直播中途拍照畫面</li>
+                                    <li>HDMI輸入/輸出介面, pass-though</li>
+                                    <li>RECentral 2代升級</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+
+                              <div class="panel newProduct new2 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/tp-link_ue300_white.jpg" alt="TP-Link UE300"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/tp-link-logo.jpg" alt="TP-Link"/>
+                                  </a>
+                                  <a href="#">UE300</a>
+                                  </h3>
+                                  <h4>USB3.0 to Giga LAN Adapter </h4>
+                                  <h5>2/7/2015 | Networking | SOHO </h5>
+                                  <ul>
+                                    <li>1000M傳輸</li>
+                                    <li>USB3.0 Port</li>
+                                    <li>Giga LAN</li>
+                                    <li>Plug-n-Play 即插即用</li>
+                                    <li>USB Port收納式設計 易於攜帶</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+                                <div class="panel newProduct new3 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/brinno_PHV132514.jpg" alt="Brinno PHV132614">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/brinno-logo.jpg" alt="Brinno"/>
+                                  </a>
+                                  <a href="#">PHV 132514</a>
+                                  </h3>
+                                  <h4> 數碼電子貓眼 </h4>
+                                  <h5>2/7/2015 | Surveillance | SOHO </h5>
+                                  <ul>
+                                    <li>LCD大螢幕</li>
+                                    <li>隱藏式安防</li>
+                                    <li>續航力第一</li>
+                                    <li>3步安裝完成</li>
+                                    <li>無須施工拉線轉孔</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+
+                                <div class="panel newProduct new4 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/engenius_eap1200h.jpg" alt="Engenius EAP2100"/>
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/engenius-logo.jpg" alt="Engenius"/>
+                                  </a>
+                                  <a href="#">EAP1200H</a>
+                                  </h3>
+                                  <h4>AC1200 Long Range AP </h4>
+                                  <h5>2/7/2015 | Networking | SME </h5>
+                                  <ul>
+                                    <li>300M+867M同步雙頻</li>
+                                    <li>4* 3D Sectorized天線</li>
+                                    <li>Band Steering/Fast Roaming</li>
+                                    <li>100人同時使用</li>
+                                    <li>EZ Controller AP中央管理軟件</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+
+                                <div class="panel newProduct new5 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/iwalk_dolphin-dual.jpg" alt="iWALK Dolphin Dual">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/iwalk-logo.jpg" alt="iWALK"/>
+                                  </a>
+                                  <a href="#">Dophin Dual</a>
+                                  </h3>
+                                  <h4> Smart USB Dual Charger </h4>
+                                  <h5>2/7/2015 | Gadgets | Home </h5>
+                                  <ul>
+                                    <li>通過3C認證、蘋果官方認證</li>
+                                    <li>自帶充電保護</li>
+                                    <li>On/Off開關鍵 最大輸出功率:10W</li>
+                                    <li>多重保護電路 智慧晶片控制</li>
+                                    <li>雙USB輸出可用於iPad充電及急充</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+ 
+
+                                <div class="panel newProduct new5 hvr-grow-car">
+                                  <img class="zoom" src= "img/product/coolux-x3s.jpg" alt="Coolux X3S Mobile">
+                                  <h3 class="item-header">
+                                  <a href="#">
+                                    <img src= "img/logo/brand/coolux-logo.jpg" alt="iWALK"/>
+                                  </a>
+                                  <a href="#">X3S-Mobile</a>
+                                  </h3>
+                                  <h4> 輕薄3D高清無線便攜投影機  </h4>
+                                  <h5>2/7/2015 | Gadgets | SOHO </h5>
+                                  <ul>
+                                    <li>無線/HDMI/VGA/TF/USB連接</li>
+                                    <li>iOS:DLNA,Android:Miracast無線投影</li>
+                                    <li>1280x800, 900流明(max.120吋)</li>
+                                    <li>DLP-LINK主動式3D投影 支援Blu-ray 3D片</li>
+                                    <li>內置8000mAh 無須火牛</li>
+                                    <li>方便攜帶 僅薄28mm 重550g</li>
+                                  </ul>
+                                  <p><a href="#" class="more">Read More</a></p>
+                                </div>
+
+
+
+                          </div>      
+                        </div>
+                        <div class="sidebarSection medium-4 large-3 columns">
+                          <h2><img src= "img/logo/eb_icon_50.png" alt="eb_icon"/> News</h2>
+                          <div class="side-miniSection">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-shopping-bag"></i>
+                              EB Promotion
+                              </h2>
+                            </div>
+                            <ul>
+                              <li>TP-LINK暑期熱選優惠 多款家居網絡/旅行Pocket Wi-Fi 特價發售</li>
+                              <li>熱烈祝賀Sades成為HKESports專業電競耳機贊助商優惠</li>
+                              <li>EasyN潮玩高科父親節高清監控IP Cam送大禮優惠</li>
+                            </ul>
+                          </div>
+                          <div class="side-miniSection">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-torsos-all"></i>
+                              EB Events
+                              </h2>
+                            </div>
+                            <ul>
+                              <li>永佳科技七月「拍攝玩樂迎暑假」展銷會 <h5>10-12/7/15 1-8pm @ 深水埗黃金電腦商場地面(扶手電梯旁) </h5></li>
+                              <li>【Unwire x Everbest 有禮】送你香港全球首發Game Robo Alpha 1S 新一代智能人形機械人 <h5>8-11/7/15 www.unwirehk.com </h5></li>
+                            </ul>
+                          </div>
+                          <div class="side-miniSection award">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-trophy"></i>
+                              EB Awards
+                              </h2>
+                            </div>
+                            <ul>
+                              <li class="side-item row">
+                                 <a class="small-3 columns sidebar-img" href="#"><img src= "img/award/tp-link-travelrouter.jpg"/></a>
+                                <a class="small-9 columns sidebar-word" href="#">
+                                  <h3><strong>TP-LINK WR802N </strong> </h3>
+                                  <span>PCS最抵買大獎</span>
+                                  <h5>Issue No‧760 ‧29/5/2015</h5>
+                                </a>
+                              </li>
+                              <li class="side-item row">
+                                <a class="small-3 columns sidebar-img" href="#"><img src= "img/award/easyn-137w.jpg"/></a>
+                                <a class="small-9 columns sidebar-word" href="#">
+                                  <h3><strong>EasyN 2MP FHD 1080p IPCAM 137W</strong></h3>
+                                  <span>PCS Best Design Award</span>
+                                  <h5>Issue No‧765 ‧3/7/2015</h5>
+                                </a>
+                              </li>
+                              <li class="side-item row">
+                                 <a class="small-3 columns sidebar-img" href="#"><img src= "img/award/avermedia-gc550.jpg"/></a>
+                                <a class="small-9 columns sidebar-word" href="#">
+                                  <h3><strong>AVerMedia Live Gamer Extreme</strong></h3>
+                                  <span>PC3 2015編輯推薦大獎</span>
+                                  <h5>Issue No‧751 ‧29/6/2015</h5>
+                                </a>
+                              </li>
+                              <li class="side-item row">
+                                 <a class="small-3 columns sidebar-img" href="#"><img src= "img/award/tp-link-homeplug.jpg"></a>
+                                <a class="small-9 columns sidebar-word" href="#">
+                                  <h3><strong>TP-LINK PA8030P-KIT AV1200 HomePlug Kit</strong></h3>
+                                  <span>e-zone Choice大獎 </span>
+                                  <h5>Issue No‧1432 3/6/2015</h5>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="side-miniSection mag">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-comment-quotes"></i>
+                              EB Media Coverage
+                              </h2>
+                            </div>
+                            <ul>
+                              <li class="side-item row">
+                                <a class="small-5 columns sidebar-img" href="#"><img src="img/news/gamerobo_orientaltv.jpg"></a>
+                                <a class="small-7 columns sidebar-word"href="#">
+                                  <h3><strong>Game Robo Intelligent Robots</strong> </h3>
+                                  <span>Interview: HK Junior Robot Engineers Program</span>
+                                  <h5>Phoenix TV 【全媒體大開講】 9/7/2015 6:30-7:15pm</h5>
+                                </a>
+                              </li>
+                              <li class="side-item row">
+                                <a class="small-5 columns sidebar-img " href="#"><img src="img/news/trendwoo_easttouch.jpg"></a>
+                                <a class="small-7 columns sidebar-word" href="#">
+                                  <h3><strong>Trendwoo Blade</strong></h3>
+                                  <span>"外形設計簡約 容易陪襯</span>
+                                  <br><span>360度旋轉手抽及底座 相當方便"</span>
+                                  <h5>East Touch Issue No‧1049‧ 6/7/2015</h5>
+                                </a>
+                              </li>
+                              
+                              <li class="side-item row">
+                                <a class="small-5 columns sidebar-img" href="#"><img src="img/news/easyn_itpro.jpg"></a>
+                                <a class="small-7 columns sidebar-word" href="#">
+                                  <h3><strong>EasyN SuperBabe/H3-147W/NR-1-A4</strong></h3>
+                                  <span>"高清可愛IP Cam全方位滿足市場</span>
+                                  <br><span> 設定簡單 價格實惠"</span>
+                                  <h5>IT PRO‧ Issue No.98‧ Jun 2015</h5>
+                                </a>
+                              </li>
+
+                              <li class="side-item row">
+                                <a class="small-5 columns sidebar-img" href="#"><img src="img/news/brinno_hkgolden.jpg"></a>
+                                <a class="small-7 columns sidebar-word" href="#">
+                                  <h3><strong>Brinno TCL200 Pro</strong></h3>
+                                  <span>"擅於應付低光環境，由日出影到日落，或者紀錄整晚星空流動都冇有怕</span>
+                                  <h5>HK Golden 6/7/2015</h5>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <div class="side-miniSection">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-pencil"></i>
+                              Upcoming Class
+                              </h2>
+                            </div>
+                            <ul>
+                              <li><strong>For S.I.:  ATEN Altusen</strong><br> IT架構集中管理方案講座<h5>15/7/15</h5></li>
+                              <li><strong>For S.I.:  TP-Link Dual Band AP</strong>
+                              <br>『無線網絡基礎實戰班』(七月份)<h5>17/7/15</h5></li>
+                              <li><strong>For End Users: EasyN IP Cam</strong>
+                              <br>安裝及應用課程<h5>9/7/15</h5></li>
+                              <li><strong>For End Users: Wansview IP Cam</strong>
+                              <br>安裝及應用課程<h5>13/7/15</h5></li>
+                            </ul>
+                          </div>
+                          <div class="side-miniSection">
+                            <div class="side-miniSection-title">
+                              <h2><i class="fi-download"></i>
+                              EB Upgrades
+                              </h2>
+                            </div>
+                            <ul>
+                              <li><strong>[新升級] ATEN </strong> 抽拉式 LCD KVM多電腦切換器 CL5708M/5716M/5800N
+                                <h4>新增LED Illumination技術人員工作更方便高效!</h4>
+                                <h5>July 2015</h5>
+                              </li>
+                              <li><strong>[多種革新功能] Axis </strong>  全新系列網絡攝影機
+                                <h4>開拓多種全新應用範疇 進一步擴闊市場空間!</h4>
+                                <h5>July 2015</h5>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      </div> <!-- closing #container -->
+                      <footer>
+                        <h3> <img src= "img/logo/eb_icon_forwhite.gif" alt="eb_icon"/> </h3>
+                        <div id="ebcontact">
+                          <div class="officehr bottom">
+                            <ul>Office Hour:
+                              <li>Mon- Fri: 9:00 am to 12:00 pm, 1:30 pm to 5:00 pm;</li>
+                              <li>Sat: 9:00 am to 12:30pm (Appointments only);</li>
+                              <li>Sunday, Public Holidays: Closed</li>
+                            </ul>
+                            <ul>Sales 14/F
+                              <li><i class="fi-telephone"></i>(852) 2541 2982 </li>
+                              <li><i class="fi-mail"></i> sales@everbesthk.com</li>
+                            </ul>
+                            <ul>Technical Support 15/F
+                              <li><i class="fi-telephone"></i>(852) 2544 0103 </li>
+                              <li><i class="fi-mail"></i> support@everbesthk.com </li>
+                            </ul>
+                          </div>
+                          <div class="officeaddress bottom">
+                            <ul> Address:
+                              <li>香港中環永吉街11號永亨保險大廈14樓</li>
+                              <li>14th Floor (Sales) , 15th Floor (Warranty), </li>
+                              <li>Wing Hang Insurance Building,</li>
+                              <li>11 Wing Kut Street, Central, Hong Kong</li>
+                              <li>MTR Exit: Sheung Wan E2</li>
+                            </ul>
+                          </div>
+                          <div id="map-canvas"></div>
+                        </div>
+                        <div id="copyright"><p>&copy;2015 Everbest Technologies Ltd.| Bringing Innovative Products into HK & Macau since <span>1991</span></p></div>
+                      </footer>
+                      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+                      <script src="bower_components/foundation/js/foundation.min.js"></script>
+                      <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+                      <script src="js/app.js"></script>
+                      <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+                    </body>
+                  </html>
